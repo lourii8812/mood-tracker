@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "Lunari · Your Wellbeing Space",
+  "short_name": "Lunari",
+  "description": "A quiet little space to check in with yourself, one day at a time.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8f6ff",
+  "theme_color": "#7663b8",
+  "icons": [
+    {"src":"icons/lunari.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
