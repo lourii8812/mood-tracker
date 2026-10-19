@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,12 +15,24 @@
 <body>
   <main class="app-shell">
     <header class="topbar">
-      <div><p class="eyebrow">YOUR PERSONAL WELLBEING SPACE</p><h1>lunari <span aria-hidden="true">☾</span></h1><p class="subtitle">A little space to check in with yourself.</p></div>
+      <div>
+        <p class="eyebrow">YOUR PERSONAL WELLBEING SPACE</p>
+        <h1>lunari <span aria-hidden="true">☾</span></h1>
+        <p class="subtitle">A little space to check in with yourself.</p>
+      </div>
       <div class="date-chip" id="today-chip"></div>
     </header>
 
     <section class="card checkin" aria-labelledby="checkin-title">
-      <div class="section-heading"><div><p class="eyebrow">DAILY CHECK-IN</p><h2 id="checkin-title">How are you feeling?</h2><p id="selected-date" class="muted"></p></div><button id="today-button" class="text-button" type="button">Today</button></div>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DAILY CHECK-IN</p>
+          <h2 id="checkin-title">How are you feeling?</h2>
+          <p id="selected-date" class="muted"></p>
+        </div>
+        <button id="today-button" class="text-button" type="button">Today</button>
+      </div>
+
       <div id="mood-options" class="mood-grid" aria-label="Choose your mood">
         <button class="mood-option" data-mood="happy" type="button"><span>😊</span><small>Happy</small></button>
         <button class="mood-option" data-mood="okay" type="button"><span>😌</span><small>Okay</small></button>
@@ -27,24 +40,52 @@
         <button class="mood-option" data-mood="anxious" type="button"><span>😵‍💫</span><small>Anxious</small></button>
         <button class="mood-option" data-mood="tired" type="button"><span>😴</span><small>Tired</small></button>
       </div>
+
       <label class="field-label" for="journal-note">A little note about your day</label>
       <textarea id="journal-note" rows="5" maxlength="5000" placeholder="What’s on your mind? You can write anything here."></textarea>
-      <div class="save-row"><span id="save-status" role="status">Saved on this device automatically</span><span id="char-count">0 characters</span></div>
+
+      <div class="save-actions">
+        <button id="save-note" class="save-button" type="button">Save note</button>
+        <div class="save-row">
+          <span id="save-status" role="status" aria-live="polite">Your note has not been saved yet.</span>
+          <span id="char-count">0 characters</span>
+        </div>
+      </div>
     </section>
 
     <section class="card calendar-card" aria-labelledby="calendar-title">
-      <div class="section-heading"><div><p class="eyebrow">YOUR MONTH</p><h2 id="calendar-title">Mood calendar</h2></div><div class="month-controls"><button id="prev-month" type="button" aria-label="Previous month">‹</button><strong id="month-label"></strong><button id="next-month" type="button" aria-label="Next month">›</button></div></div>
-      <div class="calendar-grid weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR MONTH</p>
+          <h2 id="calendar-title">Mood calendar</h2>
+        </div>
+        <div class="month-controls">
+          <button id="prev-month" type="button" aria-label="Previous month">‹</button>
+          <strong id="month-label"></strong>
+          <button id="next-month" type="button" aria-label="Next month">›</button>
+        </div>
+      </div>
+
+      <div class="calendar-grid weekdays" aria-hidden="true">
+        <span>Mon</span><span>Tue</span><span>Wed</span>
+        <span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+      </div>
       <div id="calendar-days" class="calendar-grid" aria-label="Calendar days"></div>
       <p class="calendar-hint">Choose a day to view or update its check-in. A small mood symbol marks days you’ve logged.</p>
     </section>
 
     <section class="card history-card" aria-labelledby="history-title">
-      <p class="eyebrow">GENTLE REFLECTION</p><h2 id="history-title">Your recent check-ins</h2>
+      <p class="eyebrow">GENTLE REFLECTION</p>
+      <h2 id="history-title">Your recent check-ins</h2>
       <div id="recent-list" class="recent-list"></div>
     </section>
-    <footer>Made for your softer moments. <span>☾</span><p>Your entries stay in this browser on this device. They are not synced to an account.</p></footer>
+
+    <footer>
+      Made for your softer moments. <span>☾</span>
+      <p>Your entries stay in this browser on this device. They are not synced to an account.</p>
+    </footer>
   </main>
+
   <script src="app.js" defer></script>
 </body>
 </html>
